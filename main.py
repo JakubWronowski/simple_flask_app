@@ -48,15 +48,14 @@ def login_page():
         login_user(user)
         return redirect(url_for('protected_area'))
     else:
-        return redirect(url_for('login_page'))  # You should probably show some error message here
-
+        return redirect(url_for('login_page'))  
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         user_name = request.form['username']
         password = request.form['password']
         if User.query.get(user_name) is not None:
-            return 'User already exists'  # You should probably show some error message here
+            return 'User already exists' 
         new_user = User(id=user_name)
         new_user.set_password(password)
         db.session.add(new_user)
