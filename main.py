@@ -66,7 +66,7 @@ def register():
 @app.route('/protected')
 @login_required
 def protected_area():
-    return 'Welcome back, ' + current_user.id + '! Ready for a new adventure?'
+    return 'Welcome back, ' + current_user.id + ' ! Ready for a new adventure?'
 
 @app.route('/logout')
 @login_required
