@@ -10,7 +10,8 @@ pipeline {
     stage('Login_test') {
       steps {
         sh '''#!/bin/bash
-pip install pytest
+python3 -m venv venv
+venv/bin/pip install -r requirements.txt\'
 python3 -m pytest login_test.py'''
       }
     }
