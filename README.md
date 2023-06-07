@@ -10,3 +10,5 @@
 # Previously added code written with help of PyTest to check login page - 'login_test.py'.
 
 # Added some comments so script would be more clear and readable and also improved user experience by providing clear error messages.
+
+# Currently experimenting with Jenkins and DockerHub push
