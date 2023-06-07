@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Login_test') {
+      steps {
+        sh 'python3 -m pytest login_test.py'
+      }
+    }
+
   }
 }
