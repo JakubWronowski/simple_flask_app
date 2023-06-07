@@ -10,6 +10,7 @@ pipeline {
     stage('Login_test') {
       steps {
         sh '''#!/bin/bash
+pip install pytest
 python3 -m pytest login_test.py'''
       }
     }
