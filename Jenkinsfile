@@ -17,5 +17,12 @@ venv/bin/python -m pytest login_test.py
       }
     }
 
+    stage('DockerBuild') {
+      steps {
+        sh '''#!/bin/bash
+docker build -t simple_flask_app:latest .'''
+      }
+    }
+
   }
 }
