@@ -17,5 +17,11 @@ venv/bin/python -m pytest login_test.py
       }
     }
 
+    stage('Build') {
+      steps {
+        build 'Build'
+      }
+    }
+
   }
 }
