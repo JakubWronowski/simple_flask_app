@@ -12,7 +12,8 @@ pipeline {
         sh '''#!/bin/bash
 python3 -m venv venv
 venv/bin/pip install -r requirements.txt
-python3 -m pytest login_test.py'''
+venv/bin/python -m pytest login_test.py
+'''
       }
     }
 
