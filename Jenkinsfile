@@ -19,7 +19,9 @@ venv/bin/python -m pytest login_test.py
 
     stage('Build Docker') {
       steps {
-        sh 'docker build -f simple_flask_app/Dockerfile .'
+        sh '''#!/bin/bash
+cd ~/Desktop/simple_flask_app
+docker build -f simple_flask_app/Dockerfile .'''
       }
     }
 
