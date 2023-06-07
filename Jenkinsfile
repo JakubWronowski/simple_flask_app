@@ -24,13 +24,5 @@ docker build -t simple_flask_app:latest .'''
       }
     }
 
-    stage('Run') {
-      steps {
-        sh '''#!/bin/bash 
-docker run -d -p 5002:5002 simple_flask_app:latest
-'''
-      }
-    }
-
   }
 }
